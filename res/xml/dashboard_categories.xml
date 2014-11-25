@@ -84,12 +84,12 @@
                 android:icon="@drawable/ic_settings_home"
                 />
 
-        <!-- Status bar -->
+        <!-- Candy interface -->
         <dashboard-tile
-                android:id="@+id/status_bar_settings"
-                android:title="@string/status_bar_title"
-                android:fragment="com.android.settings.cyanogenmod.StatusBarSettings"
-                android:icon="@drawable/ic_settings_home"
+                android:id="@+id/main_settings"
+                android:title="@string/candy_settings_title"
+                android:fragment="com.android.settings.candy.MainSettings"
+                android:icon="@drawable/ic_candy_interface"
                 />
 
 

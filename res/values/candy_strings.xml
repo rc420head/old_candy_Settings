@@ -40,9 +40,6 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
 
-    <!-- Candy5 Settings Strings -->
-    <string name="attention">Attention</string>
-
     <!-- Display : Rotation -->
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_disabled">Disabled</string>
@@ -52,6 +49,29 @@
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
+
+<!-- Candy5 Settings Strings -->
+    <string name="attention">Attention</string>
+    <string name="display_category_candy5_options_title">Candy5 Interface</string>
+    <string name="category_general_title">General Options</string>
+    <string name="candy_settings_title">Candy interface</string>
+
+ <string name="header_category_personalization">Personalization</string>
+
+    <!-- Candy interface -->
+    <string name="Candy_title">Candy interface</string>
+    <string name="Navigation_bar">Navigation bar</string>
+    <string name="Status_bar">Status bar</string>
+
+      <!-- Status bar -->
+    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+
+    <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
+    <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
+
+
 
     <!-- Navigation Bar Height -->
     <string name="navigation_bar_height">Navigation bar height</string>

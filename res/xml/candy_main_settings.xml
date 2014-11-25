@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2014 The CyanogenMod Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,7 +14,20 @@
      limitations under the License.
 -->
 
-<PreferenceScreen
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+        android:title="@string/candy_settings_title" >
+
+        <ListPreference
+                android:key="navigation_bar_height"
+                android:dialogTitle="@string/navigation_bar_height"
+                android:title="@string/navigation_bar_height"
+                android:entries="@array/navigation_bar_height_entries"
+                android:entryValues="@array/navigation_bar_height_values"
+                android:defaultValue="48"
+                android:persistent="false" />
+
+   <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/status_bar_title">
 
@@ -29,5 +42,8 @@
         android:title="@string/status_bar_quick_qs_pulldown_title"
         android:summary="@string/status_bar_quick_qs_pulldown_summary"
         android:defaultValue="true" />
+
+</PreferenceScreen>
+
 
 </PreferenceScreen>
