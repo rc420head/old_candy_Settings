@@ -30,7 +30,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.status_bar_prefs);
+        addPreferencesFromResource(R.xml.candy_main_settings);
         initUI();
     }
 
