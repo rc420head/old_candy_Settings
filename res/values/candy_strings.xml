@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+
+     Copyright (C) 2014 Candy5 Android
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -62,15 +64,17 @@
     <string name="Candy_title">Candy interface</string>
     <string name="Navigation_bar">Navigation bar</string>
     <string name="Status_bar">Status bar</string>
+    <string name="Recents_panel">Recents panel</string>
 
       <!-- Status bar -->
     <string name="keywords_status_bar">status bar drawer icons</string>
     <string name="status_bar_title">Status bar</string>
+
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
-
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
+
 
    <string name="navigation_bar">Navigation Bar</string>
 
@@ -85,6 +89,14 @@
     <string name="navigation_bar_height_24">24dp</string>
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
+
+
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Clear all recents button</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
+    <string name="recents_clear_all_location_title">Clear all recents location</string>
+    <string name="recents_clear_all_location_right">Top right</string>
+    <string name="recents_clear_all_location_left">Top left</string>
 
 
 </resources>
