@@ -28,6 +28,7 @@ import android.preference.ListPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.CheckBoxPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -40,6 +41,9 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+ 
 
 public class MainSettings extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener, Indexable {
@@ -67,7 +71,7 @@ private ListPreference mNavigationBarHeight;
         mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
         mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
         }
-
+     
          @Override
      public boolean onPreferenceChange(Preference preference, Object objValue) {
 
