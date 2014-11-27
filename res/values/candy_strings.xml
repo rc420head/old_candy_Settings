@@ -86,11 +86,11 @@
       <!-- Status bar -->
     <string name="keywords_status_bar">status bar drawer icons</string>
     <string name="status_bar_title">Status bar</string>
-
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
+    <string name="lockscreen_show_carrier_title">Lock screen carrier label</string>
 
       <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
@@ -131,11 +131,9 @@
     <string name="clock_font_light">Light</string>
     <string name="clock_font_light_italic">Light italic</string>
     <string name="clock_font_normal">Normal</string>
-     
-
-   <string name="navigation_bar">Navigation Bar</string>
 
     <!-- Navigation Bar Height -->
+    <string name="navigation_bar">Navigation Bar</string>
     <string name="navigation_bar_height">Navigation bar height</string>
     <string name="navigation_bar_height_48">48dp (default)</string>
     <string name="navigation_bar_height_44">44dp</string>
