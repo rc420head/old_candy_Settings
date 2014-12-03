@@ -90,10 +90,8 @@
                 android:fragment="com.android.settings.candy.MainSettings"
                 android:icon="@drawable/ic_candy_interface"
                 />
-    </dashboard-category>
 
-    
-          <!-- DEVICE -->
+              <!-- DEVICE -->
          <dashboard-category
               android:id="@+id/device_section"
               android:title="@string/header_category_device" >
@@ -104,6 +102,8 @@
               android:fragment="com.android.settings.ButtonSettings"
               android:icon="@drawable/ic_settings_home"
                />
+
+          </dashboard-category>
         <!-- Display -->
         <dashboard-tile
                 android:id="@+id/display_settings"
