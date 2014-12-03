@@ -122,15 +122,5 @@
                 android:summary="@string/wakeup_when_plugged_unplugged_summary"
                 android:defaultValue="true"
                 android:persistent="false" />
-
-        </PreferenceCategory>
-
-=======
-                <SwitchPreference
-                    android:key="wake_when_plugged_or_unplugged"
-                    android:title="@string/wake_when_plugged_or_unplugged_title"
-                    android:summary="@string/wake_when_plugged_or_unplugged_summary"
-                    android:defaultValue="false" />
-        </PreferenceCategory>
->>>>>>> a4ccf640daea53c814f217395add55944e6a7b05
+         </PreferenceCategory>
 </PreferenceScreen>
