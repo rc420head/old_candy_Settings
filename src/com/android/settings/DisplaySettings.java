@@ -88,7 +88,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
-    private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
 
 
@@ -115,8 +114,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mTapToWake;
     private SwitchPreference mVolumeWake;
-    private SwitchPreference mWakeWhenPluggedOrUnplugged;
-
 
     private ContentObserver mAccelerometerRotationObserver =
             new ContentObserver(new Handler()) {
@@ -210,7 +207,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if(!getResources().getBoolean(
                 com.android.internal.R.bool.config_unplugTurnsOnScreen)) {
                 mWakeUpOptions.removePreference(mWakeUpWhenPluggedOrUnplugged);
-                counter++;
+               prefSet.removePreference(mWakeUpOptions);
         } else {
             mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(resolver,
                         Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
@@ -400,14 +397,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToWake.setChecked(TapToWake.isEnabled());
         }
 
-        // Default value for wake-on-plug behavior from config.xml
-        boolean wakeUpWhenPluggedOrUnpluggedConfig = getResources().getBoolean(
-                com.android.internal.R.bool.config_unplugTurnsOnScreen);
-
-        mWakeWhenPluggedOrUnplugged.setChecked(Settings.Global.getInt(getContentResolver(),
-                Settings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
-
         updateState();
         getContentResolver().registerContentObserver(
                 Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION), true,
@@ -488,11 +477,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mTapToWake) {
             return TapToWake.setEnabled(mTapToWake.isChecked());
-        } else if (preference == mWakeWhenPluggedOrUnplugged) {
-            Settings.Global.putInt(getContentResolver(),
-                    Settings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                    mWakeWhenPluggedOrUnplugged.isChecked() ? 1 : 0);
-            return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
