@@ -14,67 +14,67 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-        android:title="@string/candy_settings_title" >
+<PreferenceScreen 
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+             android:title="@string/candy_settings_title" >
 
-        <ListPreference
-                android:key="navigation_bar_height"
-                android:dialogTitle="@string/navigation_bar_height"
-                android:title="@string/navigation_bar_height"
-                android:entries="@array/navigation_bar_height_entries"
-                android:entryValues="@array/navigation_bar_height_values"
-                android:defaultValue="48"
-                android:persistent="false" />
+     <ListPreference
+             android:key="navigation_bar_height"
+             android:dialogTitle="@string/navigation_bar_height"
+             android:title="@string/navigation_bar_height"
+             android:entries="@array/navigation_bar_height_entries"
+             android:entryValues="@array/navigation_bar_height_values"
+             android:defaultValue="48"
+             android:persistent="false" />
 
-       <!-- Recents Panel -->
+     <!-- Recents Panel -->
+     <PreferenceScreen
+             android:key="recents_panel"
+             android:fragment="com.android.settings.candy.RecentsSettings"
+             android:title="@string/Recents_panel" >
 
-        <PreferenceScreen
-        android:key="recents_panel"
-        android:fragment="com.android.settings.candy.RecentsSettings"
-        android:title="@string/Recents_panel" >
+     </PreferenceScreen>
 
-       </PreferenceScreen>
-
- <!-- Status Bar -->
-    
-        <PreferenceScreen
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-               android:title="@string/status_bar_title" >
-
-       <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="lock_screen_show_carrier"
-            android:title="@string/lockscreen_show_carrier_title"
-            android:defaultValue="true" />
+     <!-- Status Bar -->  
+     <PreferenceScreen
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+             android:title="@string/status_bar_title" >
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
              android:key="status_bar_brightness_control"
              android:title="@string/status_bar_toggle_brightness"
              android:summary="@string/status_bar_toggle_brightness_summary"
              android:defaultValue="false" />
-   
-     <PreferenceScreen
-            android:fragment="com.android.settings.candy.StatusBarClockStyle"
-            android:key="clock_style_pref"
-            android:title="@string/status_bar_clock" />
 
-       <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+     <PreferenceScreen
+             android:fragment="com.android.settings.candy.StatusBarClockStyle"
+             android:key="clock_style_pref"
+             android:title="@string/status_bar_clock" />
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+             android:key="lock_screen_show_carrier"
+             android:title="@string/lockscreen_show_carrier_title"
+             android:defaultValue="true" />
+
+     <PreferenceScreen
+             android:key="network_traffic_state"
+             android:fragment="com.android.settings.candy.NetworkTraffic"
+             android:summary="@string/network_traffic_summary"
+             android:title="@string/network_traffic_title" />
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
              android:key="status_bar_quick_qs_pulldown"
              android:title="@string/status_bar_quick_qs_pulldown_title"
              android:summary="@string/status_bar_quick_qs_pulldown_summary"
              android:defaultValue="true" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-              android:key="status_bar_show_battery_percent"
-              android:title="@string/show_battery_percent_title"
-              android:defaultValue="false" />
+             android:key="status_bar_show_battery_percent"
+             android:title="@string/show_battery_percent_title"
+             android:defaultValue="false" />
 
-        <PreferenceScreen
-	        android:key="network_traffic_state"
-	        android:fragment="com.android.settings.candy.NetworkTraffic"
- 	        android:summary="@string/network_traffic_summary"
-	        android:title="@string/network_traffic_title" />
-   </PreferenceScreen>
+     </PreferenceScreen>
 
 </PreferenceScreen>
