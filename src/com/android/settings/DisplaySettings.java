@@ -95,7 +95,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_SUNLIGHT_ENHANCEMENT = "sunlight_enhancement";
     private static final String KEY_COLOR_ENHANCEMENT = "color_enhancement";
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
-    private static final String KEY_WAKE_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
+    private static final String KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
@@ -244,7 +244,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         mWakeWhenPluggedOrUnplugged =
-            (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_UNPLUGGED);
+            (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
         // hide option if device is already set to never wake up
        
         if (counter == 2) {
