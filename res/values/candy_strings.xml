@@ -186,7 +186,7 @@
     <string name="dpi">DPI</string>
     <string name="su_dialog_error_title">Warning</string>
     <string name="su_dialog_error_message">An error occurred.\n\nPlease check for root access. To activate go into superuser settings and enable root access.</string>
-    <string name="lcd_density_title">LCD Density</string>
+    <string name="lcd_density_title">LCD density</string>
     <string name="lcd_density_category">Options</string>
     <string name="follow_through_summary">Changing your default LCD density can sometimes cause certain apps to not function properly and/or the playstore to show apps being incompatible with your device</string>
     <string name="stock_density_title">Change to stock values</string>
