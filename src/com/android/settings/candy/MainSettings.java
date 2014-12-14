@@ -49,7 +49,9 @@ public class MainSettings extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener, Indexable {
 private static final String TAG = "MainSettings";
 
+private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
 private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+private SwitchPreference mVolBtnMusicCtrl;
 private ListPreference mNavigationBarHeight;
 
          @Override
@@ -65,6 +67,11 @@ private ListPreference mNavigationBarHeight;
         mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
         mNavigationBarHeight.setOnPreferenceChangeListener(this);
        
+        mVolBtnMusicCtrl = (SwitchPreference) findPreference(KEY_VOLBTN_MUSIC_CTRL);
+        mVolBtnMusicCtrl.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.VOLUME_MUSIC_CONTROLS, 1) != 0);
+        mVolBtnMusicCtrl.setOnPreferenceChangeListener(this);
+
         int statusNavigationBarHeight = Settings.System.getInt(getActivity().getApplicationContext()
                 .getContentResolver(),
                 Settings.System.NAVIGATION_BAR_HEIGHT, 48);
@@ -82,6 +89,11 @@ private ListPreference mNavigationBarHeight;
                     Settings.System.NAVIGATION_BAR_HEIGHT, statusNavigationBarHeight);
             mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
         }
+        }
+        if (KEY_VOLBTN_MUSIC_CTRL.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.VOLUME_MUSIC_CONTROLS,
+                    (Boolean) objValue ? 1 : 0);
         return true;
       }
     }
