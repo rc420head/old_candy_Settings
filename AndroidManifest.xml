@@ -2210,6 +2210,9 @@
         <activity
              android:name=".candy.MainSettings" />
 
+        <activity android:name=".candy.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".candy.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
 
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
