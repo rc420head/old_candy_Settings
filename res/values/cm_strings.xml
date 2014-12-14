@@ -346,7 +346,6 @@
     <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
 
     <string name="header_category_personalization">Personalization</string>
-   
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>

@@ -43,7 +43,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         super.onCreate(icicle);
 
 
-        addPreferencesFromResource(R.xml.candy_main_settings);
+        addPreferencesFromResource(R.xml.status_bar_settings);
 
     }
 
