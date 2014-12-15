@@ -308,5 +308,16 @@
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Volume rocker music controls</string>
     <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
-
+    
+    <!-- Device specific settings -->
+    <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+    <string name="shortcut_action_ring_vib">Ring/Vib</string>
+    <string name="shortcut_action_ring_silent">Ring/Silent</string>
+    <string name="shortcut_action_ring_vib_silent">Ring/Vib/Silent</string>
+    <string name="shortcut_action_camera">Camera</string>
+    <string name="shortcut_action_media_next">Music - next track</string>
+    <string name="shortcut_action_media_play_pause">Music - play/pause</string>
+    <string name="shortcut_action_media_previous">Music - previous track</string>
+    <string name="shortcut_action_wake_device">Wake up device</string>
+    
 </resources>
