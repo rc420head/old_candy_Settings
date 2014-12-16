@@ -39,10 +39,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String TAG = "StatusBarSettings";
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.candy_main_settings);
+
+        addPreferencesFromResource(R.xml.status_bar_settings);
 
     }
 
