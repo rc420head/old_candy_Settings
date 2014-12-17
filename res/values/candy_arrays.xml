@@ -331,9 +331,7 @@
         <item>@*android:drawable/ic_shortcut_twitter</item>
         <item>@*android:drawable/ic_shortcut_unlock</item>
     </string-array>
-=======
-</resources>
->>>>>>> parent of 58c4ce8... LCD Density Changer
+
 
     <string-array name="shortcut_action_entries">
         <item>@string/shortcut_action_back</item>-
