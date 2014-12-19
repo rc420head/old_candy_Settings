@@ -102,7 +102,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
     private static final String KEY_DISPLAY_COLOR = "color_calibration";
     private static final String KEY_DISPLAY_GAMMA = "gamma_tuning";
-    private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
 
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
@@ -255,11 +254,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!proximityCheckOnWait) {
             advancedPrefs.removePreference(findPreference(KEY_PROXIMITY_WAKE));
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
-        } 
-        
-       Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
-                getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);   
-                
+        }   
       }
     }
 
