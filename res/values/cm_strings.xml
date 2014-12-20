@@ -346,6 +346,13 @@
     <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
 
     <string name="header_category_personalization">Personalization</string>
+    
+     <!-- Battery percentage -->
+      <string name="status_bar_battery_percentage_title">Show battery percentage</string>
+      <string name="status_bar_battery_percentage_dialog_title">Battery percentage</string>
+      <string name="status_bar_battery_percentage_default">Hidden (default)</string>
+      <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
+      <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
