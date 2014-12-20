@@ -58,9 +58,7 @@ public class MainSettings extends SettingsPreferenceFragment  implements
 private static final String TAG = "MainSettings";
 
 private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
-private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 private SwitchPreference mVolBtnMusicCtrl;
-private ListPreference mNavigationBarHeight;
 
          @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,38 +70,28 @@ private ListPreference mNavigationBarHeight;
           
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
-        mNavigationBarHeight.setOnPreferenceChangeListener(this);
-       
         mVolBtnMusicCtrl = (SwitchPreference) findPreference(KEY_VOLBTN_MUSIC_CTRL);
         mVolBtnMusicCtrl.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.VOLUME_MUSIC_CONTROLS, 1) != 0);
         mVolBtnMusicCtrl.setOnPreferenceChangeListener(this);
 
-        int statusNavigationBarHeight = Settings.System.getInt(getActivity().getApplicationContext()
-                .getContentResolver(),
-                Settings.System.NAVIGATION_BAR_HEIGHT, 48);
-        mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
-        mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
         }
      
          @Override
      public boolean onPreferenceChange(Preference preference, Object objValue) {
        final String key = preference.getKey();
-         if (preference == mNavigationBarHeight) {
-            int statusNavigationBarHeight = Integer.valueOf((String) objValue);
-            int index = mNavigationBarHeight.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_HEIGHT, statusNavigationBarHeight);
-            mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
       
         if (KEY_VOLBTN_MUSIC_CTRL.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_MUSIC_CONTROLS,
                     (Boolean) objValue ? 1 : 0);
-            }
           }         
         return true;
       }
+      
+     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        boolean value;
+ 		return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
   }
 

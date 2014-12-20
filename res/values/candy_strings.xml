@@ -141,19 +141,25 @@
     <string name="clock_font_light_italic">Light italic</string>
     <string name="clock_font_normal">Normal</string>
 
-    <!-- Navigation Bar Height -->
-    <string name="navigation_bar">Navigation Bar</string>
-    <string name="navigation_bar_height">Navigation bar height</string>
-    <string name="navigation_bar_height_48">48dp (default)</string>
-    <string name="navigation_bar_height_44">44dp</string>
-    <string name="navigation_bar_height_40">40dp</string>
-    <string name="navigation_bar_height_36">36dp</string>
-    <string name="navigation_bar_height_32">32dp</string>
-    <string name="navigation_bar_height_28">28dp</string>
-    <string name="navigation_bar_height_24">24dp</string>
-    <string name="navigation_bar_height_20">20dp</string>
-    <string name="navigation_bar_height_0">0dp (hide)</string>
-
+   <!-- Navigation Bar Dimensions -->
+    <string name="navigation_bar_dimensions_reset_message">Reset all dimensions entries to default?</string>
+    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_dimensions_title_summary">Resize the navigation bar</string>
+    <string name="navigation_bar_height_title">Navigation bar height</string>
+    <string name="navigation_bar_height_summary">Navigation bar height while in portrait</string>
+    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
+    <string name="navigation_bar_height_landscape_summary">Navigation bar height while in landscape.</string>
+    <string name="navigation_bar_width_title">Navigation bar width</string>
+    <string name="navigation_bar_width_summary">Navigation bar height if the bar is along a side</string>
+    <string name="navigation_bar_size_48_dp_default">48 dp (default)</string>
+    <string name="navigation_bar_size_44_dp">44 dp</string>
+    <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
+    <string name="navigation_bar_size_42_dp">42 dp</string>
+    <string name="navigation_bar_size_40_dp">40 dp</string>
+    <string name="navigation_bar_size_36_dp">36 dp</string>
+    <string name="navigation_bar_size_30_dp">30 dp</string>
+    <string name="navigation_bar_size_24_dp">24 dp</string>
+    <string name="navigation_bar_size_0_dp">0 dp (off)</string>
 
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Clear all recents button</string>
