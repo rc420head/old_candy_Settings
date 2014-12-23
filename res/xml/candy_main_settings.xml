@@ -19,12 +19,17 @@
              xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
              android:title="@string/candy_settings_title" >
              
+      <PreferenceScreen
+         android:id="@+id/button_settings"
+         android:title="@string/button_pref_title"
+         android:fragment="com.android.settings.ButtonSettings">
+      </PreferenceScreen>
+            
         <!-- Gesture anywhere -->
      <PreferenceScreen
         android:key="gesture_anywhere"
         android:fragment="com.android.settings.candy.gestureanywhere.GestureAnywhereSettings"
         android:title="@string/gesture_anywhere_title" />
-
 
      <!-- Lockscreen shortcuts -->
         <PreferenceScreen
@@ -61,13 +66,4 @@
              android:title="@string/status_bar_title" >
      </PreferenceScreen>
    
-     <!--Volume Music Controls -->  
-     
-     <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-        android:key="volbtn_music_controls"
-        android:title="@string/volbtn_music_controls_title"
-        android:summary="@string/volbtn_music_controls_summary"
-        android:persistent="false"
-        android:defaultValue="true" />
-
 </PreferenceScreen>
