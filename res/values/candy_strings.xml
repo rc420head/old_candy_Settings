@@ -198,6 +198,7 @@
     <string name="enable_navigation_ring_summary">Enable long-press on home for the google now search assistant</string>
     <string name="navbar_use_gallary_warning">Info: please select Gallery to save image</string>
     <string name="navring_not_available">Install google now to enable navring</string>
+    <string name="navbar_use_gallary_warning">Info: please select Gallery to save image</string>
     
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Clear all recents button</string>
