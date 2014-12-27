@@ -302,10 +302,11 @@ public class NavbarSettingsFragment extends Fragment implements SeekBar.OnSeekBa
         });
 
         // Navigation ring
-        mLeftSide = (Switch) v.findViewById(R.id.navigation_bar_left);
-        mLeftSide.setChecked((Settings.System.getInt(activity.getContentResolver(),
-                Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, 1) == 1));
-        mLeftSide.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        mNavring = (Switch) v.findViewById(R.id.enable_navigation_ring);
+        mNavring.setChecked((Settings.System.getInt(activity.getContentResolver(),
+                Settings.System.ENABLE_NAVIGATION_RING, 1) == 1));
+        mNavring.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Settings.System.putInt(cr, Settings.System.NAVBAR_LEFT_IN_LANDSCAPE, mLeftSide.isChecked() ? 1 : 0);
