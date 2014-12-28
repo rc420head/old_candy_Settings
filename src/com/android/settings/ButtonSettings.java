@@ -154,9 +154,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         mHandler = new Handler();
         
         // Force Navigation bar related options
-        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
-        
-         // Navigation bar left
+        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);           
+        mNavigationPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
+
+        // Navigation bar left
         mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
 
         // Only visible on devices that does not have a navigation bar already,
