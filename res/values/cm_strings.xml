@@ -658,7 +658,6 @@
     <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
 
     <string name="settings_reset_button">Reset</string>
->>>>>>> 6c8fe43... Settings: Add screen color settings
 
     <!-- Message when bluetooth dialog for pin entry is showing  when HIGH security enabled-->
     <string name="bluetooth_enter_pin_msg_hs">Device requires High Security 16 character passkey</string>

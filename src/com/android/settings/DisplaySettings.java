@@ -246,9 +246,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 mVolumeWake.setOnPreferenceChangeListener(this);
             }
         }
-
+        
         mWakeWhenPluggedOrUnplugged =
-            (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
+           (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
+
+        mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
+        if (!isPostProcessingSupported()) {
+            getPreferenceScreen().removePreference(mScreenColorSettings);
+        }
         // hide option if device is already set to never wake up
        
         if (counter == 2) {
@@ -258,19 +263,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!proximityCheckOnWait) {
             advancedPrefs.removePreference(findPreference(KEY_PROXIMITY_WAKE));
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
-            }   
-          }
-        }
-
-        mWakeWhenPluggedOrUnplugged =
-                (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
-
-        mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
-        if (!isPostProcessingSupported()) {
-            getPreferenceScreen().removePreference(mScreenColorSettings);
-        }
-    }
-
+           }   
+         }
+       }
     private static boolean allowAllRotations(Context context) {
         return Resources.getSystem().getBoolean(
                 com.android.internal.R.bool.config_allowAllRotations);
