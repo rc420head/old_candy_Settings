@@ -18,38 +18,39 @@
              xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
              android:title="@string/candy_settings_title" >
-
-    <PreferenceScreen
-        android:key="aokp_animation"
-        android:title="@string/aokp_animation_title"
-        android:summary="@string/aokp_animation_summary"
-        android:fragment="com.android.settings.candy.AnimationControls" />
-      
+             
+     <PreferenceScreen
+          android:key="animations"
+          android:fragment="com.android.settings.candy.AnimationsSettings"
+          android:title="@string/animations_settings">
+     </PreferenceScreen>
+                   
       <PreferenceScreen
          android:id="@+id/button_settings"
          android:title="@string/button_pref_title"
          android:fragment="com.android.settings.ButtonSettings">
       </PreferenceScreen>
             
-        <!-- Gesture anywhere -->
+     <!-- Gesture anywhere -->
      <PreferenceScreen
         android:key="gesture_anywhere"
         android:fragment="com.android.settings.candy.gestureanywhere.GestureAnywhereSettings"
         android:title="@string/gesture_anywhere_title" />
 
      <!-- Lockscreen shortcuts -->
-        <PreferenceScreen
-        android:key="lockscreen_shortcuts"
-        android:fragment="com.android.settings.candy.dslv.ActionListViewSettings"
-        android:summary="@string/lockscreen_shortcuts_summary"
-        android:title="@string/lockscreen_shortcuts_title">
-             <extra android:name="actionMode" android:value="4" />
-             <extra android:name="maxAllowedActions" android:value="5" />
-             <extra android:name="disableLongpress" android:value="true" />
-             <extra android:name="useAppPickerOnly" android:value="true" />
-             <extra android:name="fragment" android:value="com.android.settings.candy.fragments.LockscreenShortcutFragment" />
-        </PreferenceScreen>
+     <PreferenceScreen
+      android:key="lockscreen_shortcuts"
+      android:fragment="com.android.settings.candy.dslv.ActionListViewSettings"
+      android:summary="@string/lockscreen_shortcuts_summary"
+      android:title="@string/lockscreen_shortcuts_title">
+           <extra android:name="actionMode" android:value="4" />
+           <extra android:name="maxAllowedActions" android:value="5" />
+           <extra android:name="disableLongpress" android:value="true" />
+           <extra android:name="useAppPickerOnly" android:value="true" />
+           <extra android:name="fragment" android:value="com.android.settings.candy.fragments.LockscreenShortcutFragment" />
+     </PreferenceScreen>
 
+   
      <!-- Navigationbar -->
        <PreferenceScreen
             android:key="navigation_bar"
@@ -57,18 +58,17 @@
             android:title="@string/category_navbar" />
 
      <!-- Recents Panel -->
-     
-    <PreferenceScreen
-             android:key="recents_panel"
-             android:fragment="com.android.settings.candy.RecentsSettings"
-             android:title="@string/Recents_panel">
-    </PreferenceScreen>
+     <PreferenceScreen
+      android:key="recents_panel"
+      android:fragment="com.android.settings.candy.RecentsSettings"
+      android:title="@string/Recents_panel">
+     </PreferenceScreen>
 
      <!-- Status Bar -->  
      <PreferenceScreen
-             xmlns:android="http://schemas.android.com/apk/res/android"
-             android:fragment="com.android.settings.candy.StatusBar"
-             android:title="@string/status_bar_title" >
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:fragment="com.android.settings.candy.StatusBar"
+      android:title="@string/status_bar_title" >
      </PreferenceScreen>
    
 </PreferenceScreen>
