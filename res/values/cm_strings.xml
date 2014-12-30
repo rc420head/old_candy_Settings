@@ -265,7 +265,8 @@
     <!-- About phone screen, CyanogenMod version -->
     <string name="candy5_version_title">Candy5 version</string>
     <string name="candy5_version_default">Unknown</string>
-
+    <string name="model_name">Model name</string>
+    
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
     <string name="build_date_default">2014-01-01-0000</string>
@@ -349,7 +350,6 @@
      <string name="navigation_bar_category">Navigation bar</string>
      <string name="navigation_bar_left_title">Left-handed mode</string>
      <string name="navigation_bar_left_summary">Place the navigation bar on the left side of the screen in landscape mode</string>
-
 
     <string name="header_category_personalization">Personalization</string>
 
