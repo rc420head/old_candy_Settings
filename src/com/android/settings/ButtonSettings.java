@@ -53,6 +53,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
+    private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
     private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
@@ -95,7 +96,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
     private SwitchPreference mDisableNavigationKeys;
-   
+    private SwitchPreference mNavigationBarLeftPref;
     private SwitchPreference mPowerEndCall;
     private SwitchPreference mHomeAnswerCall;
 
@@ -154,6 +155,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         
         // Force Navigation bar related options
         mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
+        
+         // Navigation bar left
+        mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
 
         // Only visible on devices that does not have a navigation bar already,
         // and don't even try unless the existing keys can be disabled
@@ -260,6 +264,25 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(volumeCategory);
         }
+   try {
+       // Only show the navigation bar category on devices that have a navigation bar
+      // unless we are forcing it via development settings
+      boolean forceNavbar = android.provider.Settings.System.getInt(getContentResolver(),
+             android.provider.Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) == 1;
+      boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar()
+             || forceNavbar;
+
+      if (hasNavBar) {
+         if (!Utils.isPhone(getActivity())) {
+             mNavigationPreferencesCat.removePreference(mNavigationBarLeftPref);
+        }
+      } else if (needsNavigationBar || !isKeyDisablerSupported()) {
+      // Hide navigation bar category
+        prefScreen.removePreference(mNavigationPreferencesCat);
+        }
+      } catch (RemoteException e) {
+        Log.e(TAG, "Error getting navigation bar status");
+      }
     }
 
     @Override
@@ -385,6 +408,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         if (appSwitchCategory != null) {
             appSwitchCategory.setEnabled(!enabled);
         }
+         if (mNavigationBarLeftPref != null) {
+             mNavigationBarLeftPref.setEnabled(enabled);
+      }
     }
 
     public static void restoreKeyDisabler(Context context) {
@@ -411,6 +437,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+    
+     private static boolean isKeyDisablerSupported() {
+         try {
+             return KeyDisabler.isSupported();
+          } catch (NoClassDefFoundError e) {
+         // Hardware abstraction framework not installed
+         return false;
+        }
     }
 
     private void handleTogglePowerButtonEndsCallPreferenceClick() {

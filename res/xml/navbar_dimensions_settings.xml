@@ -38,5 +38,5 @@
     android:key="navigation_bar_width"
     android:title="@string/navigation_bar_width_title"
     android:summary="@string/navigation_bar_width_summary" />
-    
+        
   </PreferenceScreen>
