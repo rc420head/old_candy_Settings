@@ -59,7 +59,7 @@
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="home_wake_screen"
             android:title="@string/button_wake_title"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="home_answer_call"
