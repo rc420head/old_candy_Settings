@@ -320,9 +320,5 @@ public class ShortcutPickHelper {
         }
 
         return uri;
-    }
-<<<<<<< HEAD
+      }
 }
-=======
-}
->>>>>>> 83cc293... add Voice Wakeup switch
