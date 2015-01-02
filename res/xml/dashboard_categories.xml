@@ -87,12 +87,12 @@
                 android:fragment="com.android.settings.candy.MainSettings"
                 android:icon="@drawable/ic_candy_interface"
                 />
-        </dashboard-category>
+        </dashboard-category>       
 
-              <!-- DEVICE -->
-       <dashboard-category
-              android:id="@+id/device_section"
-              android:title="@string/header_category_device" >
+    <!-- DEVICE -->
+    <dashboard-category
+            android:id="@+id/device_section"
+            android:title="@string/header_category_device" >
 
         <!-- Display -->
         <dashboard-tile
