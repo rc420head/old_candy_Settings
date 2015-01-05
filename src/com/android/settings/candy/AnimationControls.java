@@ -30,7 +30,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.candy.AnimBarPreference;
 import com.android.settings.R;
 
-import com.android.internal.util.crdroid.AwesomeAnimationHelper;
+import com.android.internal.util.candy.AwesomeAnimationHelper;
 
 import java.util.Arrays;
 
