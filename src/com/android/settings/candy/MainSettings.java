@@ -51,13 +51,11 @@ import java.util.List;
 
 
 
- 
-
 public class MainSettings extends SettingsPreferenceFragment  implements
         Preference.OnPreferenceChangeListener, Indexable {
 private static final String TAG = "MainSettings";
 
-
+    
          @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,10 +65,9 @@ private static final String TAG = "MainSettings";
         addPreferencesFromResource(R.xml.candy_main_settings);
           
         PreferenceScreen prefSet = getPreferenceScreen();
-
-
+        
         }
-     
+        
          @Override
      public boolean onPreferenceChange(Preference preference, Object objValue) {
        final String key = preference.getKey();
