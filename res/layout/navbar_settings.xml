@@ -45,7 +45,7 @@
                 android:paddingTop="4dp"
                 android:text="@string/navigation_bar_height_text"
                 android:textSize="16sp"/>
-
+            
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
@@ -238,44 +238,13 @@
                     android:layout_gravity="left"
                     android:textSize="12sp"
                     android:text="@string/alternate_key_layouts_summary" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:paddingBottom="1dp"
-                android:background="@android:color/darker_gray"/>
-
-            <LinearLayout
-                android:id="@+id/alternate_layouts"
-                style="@style/settingsFragmentStyle"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:clickable="true" >
-
-                <Switch
-                    android:id="@+id/navigation_bar_left"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:textSize="12sp"
-                    android:text="@string/navigation_bar_left_title" />
-
-                <TextView
-                    android:id="@+id/enable_navigation_left_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:textSize="12sp"
-                    android:text="@string/navigation_bar_left_summary" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:paddingBottom="1dp"
-                android:background="@android:color/darker_gray"/>
         </LinearLayout>
-    </LinearLayout>
+        
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:paddingBottom="1dp"
+                android:background="@android:color/darker_gray"/>
+            </LinearLayout>
+        </LinearLayout>
 </ScrollView>

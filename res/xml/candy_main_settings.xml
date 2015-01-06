@@ -44,8 +44,8 @@
              <extra android:name="fragment" android:value="com.android.settings.candy.fragments.LockscreenShortcutFragment" />
         </PreferenceScreen>
 
-     <!-- Navigationbar height -->
-     <PreferenceScreen
+     <!-- Navigationbar -->
+       <PreferenceScreen
             android:key="navigation_bar"
             android:fragment="com.android.settings.vanir.NavbarInterface"
             android:title="@string/category_navbar" />

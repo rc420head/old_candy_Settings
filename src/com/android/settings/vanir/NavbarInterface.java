@@ -55,9 +55,7 @@ private static final String TAG = "SystemSettings";
 
     private static final String CATEGORY_NAVBAR = "Navigation_bar";
     
-    private static final String KEY_NAVIGATION_RING = "enable_navigation_ring";
    
-    private SwitchPreference mNavring;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,9 +64,6 @@ private static final String TAG = "SystemSettings";
         addPreferencesFromResource(R.xml.navbar_interface);
         PreferenceScreen prefSet = getPreferenceScreen();
         
-        mNavring = (SwitchPreference) findPreference(KEY_NAVIGATION_RING);
-            mNavring.setEnabled(false);
-            mNavring.setSummary(getActivity().getResources().getString(R.string.navring_not_available));
      }
     @Override
     public void onResume() {

@@ -26,10 +26,10 @@
             android:fragment="com.android.settings.vanir.navbar.NavbarTabHostFragment"
             android:title="@string/category_navbar" />
 
-        <SwitchPreference
-            android:key="enable_navigation_ring"
-            android:title="@string/enable_navigation_ring_title"
-            android:summary="@string/enable_navigation_ring_summary"
-            android:defaultValue="true" />
+   <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="navigation_bar_left"
+        android:title="@string/navigation_bar_left_title"
+        android:summary="@string/navigation_bar_left_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
