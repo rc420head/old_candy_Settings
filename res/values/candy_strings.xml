@@ -108,36 +108,12 @@
     <string name="status_bar_show_weather_title">Show weather</string>
     <string name="status_bar_show_weather_summary">Show the weather in the status bar header</string>
 
-   
+   <!-- Superuser indicator-->
+    <string name="su_indicator">Superuser indicator</string>
+    <string name="su_indicator_summary">Show superuser indicator when a session is active</string>
 
       <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
-
-    <!-- Superuser indicator-->
-    <string name="su_indicator">Superuser indicator</string>
-    <string name="su_indicator_summary">Show superuser indicator when a session is active</string>
-    <!-- Advanced, Device specific (DeviceParts) settings  -->
-    <string name="device_settings_title">Device</string>
-    <string name="rr_mod_version">Resurrection version</string>
-    <!-- Status bar -->
-    <string name="status_bar_title"><i><b>Status Bar</b></i></string>
-    <string name="status_bar_style_title">Style and Tweaks</string>
-    <string name="rr_cat_title">Personalize</string>
-    <string name="status_bar_style_title">Style</string>
-    <!-- misc -->
-    <string name="misc_settings_title"><i><b>Miscellaneous</b></i></string>
-    <string name="interface_settings_title"><i><b>Interface</b></i></string>
-    <string name="rr_display_title">Display</string>
-    <string name="rr_animations_title">Animations</string>
-    <string name="listview_category_summary">Choose list view scroll animations and interpolator</string>
-    <string name="status_bar_title_summary">Customize statusbar clock date and traffic monitor etc</string>
-    <string name="changelog_title"><i><b>Changelog</b></i></string>
-    <string name="changelog_loading">Loading changelog...</string>
-    <string name="changelog_error">Unable to load changelog</string>
-    <string name="changelog_unknown">Unknown</string>
-    <string name="changelog_version">Version</string>
-    <!-- Status bar | Clock -->
-    <string name="status_bar_clock"><i><b>Clock and date</b></i></string>
     <string name="status_bar_clock_title">Clock and date style</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
