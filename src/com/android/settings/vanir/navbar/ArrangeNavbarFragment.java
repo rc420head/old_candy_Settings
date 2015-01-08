@@ -102,12 +102,13 @@ public class ArrangeNavbarFragment extends Fragment implements OnPickListener {
     ViewGroup rootView;
 
     public static enum DialogConstant {
-        ICON_ACTION {
-            @Override
-            public String value() {
+        /**ICON_ACTION {
+             @Override
+             public String value() {
                 return "**icon**";
-            }
-        },
+             }
+         },
+     */
         LONG_ACTION {
             @Override
             public String value() {
@@ -347,11 +348,12 @@ public class ArrangeNavbarFragment extends Fragment implements OnPickListener {
                 createDialog(getResources().getString(R.string.choose_action_double_tap_title),
                         mActions, mActionCodes);
                 break;
-            case ICON_ACTION:
+            /** case ICON_ACTION:
                 Toast.makeText(getActivity(), getResources().getString(R.string.navbar_use_gallary_warning), 300).show();
                 mActionTypeToChange = dConstant;
                 int width = 85;
                 int height = width;
+               
 
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
                 intent.setType("image/*");
@@ -368,6 +370,7 @@ public class ArrangeNavbarFragment extends Fragment implements OnPickListener {
                         + getTempFileUri());
                 startActivityForResult(intent, REQUEST_PICK_CUSTOM_ICON);
                 break;
+                 */
             case NOT_IN_ENUM:
                 // action was selected, uri should be the value
                 // mSelectedButton
@@ -381,9 +384,10 @@ public class ArrangeNavbarFragment extends Fragment implements OnPickListener {
                     case DOUBLE_TAP_ACTION:
                         mSelectedButton.doubleTapAction = uri;
                         break;
-                    case ICON_ACTION:
+                    /** case ICON_ACTION:
                         mSelectedButton.iconUri = uri;
                         break;
+                        */
                 }
                 saveUserConfig();
                 mAdapter.notifyDataSetChanged();
@@ -451,9 +455,10 @@ public class ArrangeNavbarFragment extends Fragment implements OnPickListener {
             case DOUBLE_TAP_ACTION:
                 mSelectedButton.doubleTapAction = uri;
                 break;
-            case ICON_ACTION:
+            /** case ICON_ACTION:
                 mSelectedButton.iconUri = uri;
                 break;
+                */
         }
         saveUserConfig();
         mAdapter.notifyDataSetChanged();
@@ -505,9 +510,10 @@ public class ArrangeNavbarFragment extends Fragment implements OnPickListener {
                     case DOUBLE_TAP_ACTION:
                         mSelectedButton.doubleTapAction = imageUri;
                         break;
-                    case ICON_ACTION:
+                    /** case ICON_ACTION:
                         mSelectedButton.iconUri = imageUri;
                         break;
+                        */
                 }
 
                 File f = new File(tempSelectedUri.getPath());
