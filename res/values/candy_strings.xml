@@ -208,7 +208,7 @@
     <string name="recents_clear_all_location_title">Clear all recents location</string>
     <string name="recents_clear_all_location_right">Top right</string>
     <string name="recents_clear_all_location_left">Top left</string>
-
+    <string name="recents_searchbar_title">Search bar</string>
 
     <!-- Notifications on keyguard -->
     <string name="app_notification_show_on_keyguard_title">Show on lockscreen</string>
