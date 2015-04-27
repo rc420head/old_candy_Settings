@@ -44,15 +44,14 @@
              <extra android:name="fragment" android:value="com.android.settings.candy.fragments.LockscreenShortcutFragment" />
         </PreferenceScreen>
 
-     <!-- Navigationbar height -->
-   <PreferenceScreen
-      android:key="navbar_dimensions"
-      android:fragment="com.android.settings.candy.NavBarDimensions"
-      android:summary="@string/navigation_bar_dimensions_title_summary"
-      android:title="@string/navigation_bar_title">
-   </PreferenceScreen>
-           
+     <!-- Navigationbar -->
+       <PreferenceScreen
+            android:key="navigation_bar"
+            android:fragment="com.android.settings.vanir.NavbarInterface"
+            android:title="@string/category_navbar" />
+
      <!-- Recents Panel -->
+     
     <PreferenceScreen
              android:key="recents_panel"
              android:fragment="com.android.settings.candy.RecentsSettings"
